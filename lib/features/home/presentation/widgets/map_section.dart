@@ -108,41 +108,49 @@ class MapSection extends StatelessWidget {
               ),
         ),
         const SizedBox(height: 32),
-        Row(
-          children: [
-            _buildStat('13+', 'PARTNER', Colors.amber),
-            const SizedBox(width: 48),
-            _buildStat('87+', 'PROJECT DONE', Colors.blue),
-            const SizedBox(width: 48),
-            _buildStat('135+', 'PENDING PROJECT', Colors.green),
-          ],
+        LayoutBuilder(
+          builder: (context, constraints) => Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              _buildStat('13+', 'PARTNER', Colors.amber),
+              SizedBox(width: constraints.maxWidth >= 1100 ? 48 : 24),
+              _buildStat('87+', 'PROJECT DONE', Colors.blue),
+              SizedBox(width: constraints.maxWidth >= 1100 ? 48 : 24),
+              _buildStat('135+', 'PENDING PROJECT', Colors.green),
+            ],
+          ),
         ),
       ],
     );
   }
 
   Widget _buildStat(String number, String label, Color color) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          number,
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: color,
-          ),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.grey[600],
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final isDesktop = constraints.maxWidth >= 1100;
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              number,
+              style: TextStyle(
+                fontSize: isDesktop ? 24 : 20,
+                fontWeight: FontWeight.bold,
+                color: color,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: isDesktop ? 12 : 10,
+                color: Colors.grey[600],
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

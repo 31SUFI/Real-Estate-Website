@@ -26,5 +26,5 @@ flutter:
   
   assets:
     - assets/images/
-    # - assets/images/building2.jpg
+    - assets/icons/
     # - assets/images/linkedin.svg
