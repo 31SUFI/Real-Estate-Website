@@ -25,11 +25,14 @@ class MapSection extends StatelessWidget {
           // Left side - Image
           Expanded(
             flex: 1,
-            child: SizedBox(
-              height: 400,
-              child: Image.asset(
-                'assets/images/building.jpg',
-                fit: BoxFit.contain,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: SizedBox(
+                height: 400,
+                child: Image.asset(
+                  'assets/images/maps.jpg',
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ),

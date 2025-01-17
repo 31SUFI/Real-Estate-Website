@@ -1,5 +1,5 @@
-name: your_project_name
-description: "A new Flutter project"
+name: Bauction
+description: "An auction app for buying and selling properties"
 
 publish_to: 'none' 
 
@@ -26,5 +26,5 @@ flutter:
   
   assets:
     - assets/images/
-    - assets/images/building2.jpg
-    - assets/images/linkedin.svg
+    # - assets/images/building2.jpg
+    # - assets/images/linkedin.svg

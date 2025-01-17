@@ -21,26 +21,27 @@ class RecommendedSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _buildCompanyLogo(),
-            _buildCompanyLogo(),
-            _buildCompanyLogo(),
-            _buildCompanyLogo(),
-          ],
+        SizedBox(
+          height: 32,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(
+              4,
+              (index) => Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: _buildCompanyLogo(),
+              ),
+            ),
+          ),
         ),
       ],
     );
   }
 
   Widget _buildCompanyLogo() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-      child: SvgPicture.asset(
-        'assets/images/linkedin.svg',
-        height: 32,
-      ),
+    return SvgPicture.asset(
+      'assets/images/linkedin.svg',
+      height: 32,
     );
   }
 }
