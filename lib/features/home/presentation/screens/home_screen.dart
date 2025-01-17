@@ -6,6 +6,8 @@ import '../widgets/recommended_section.dart';
 import '../widgets/product_section.dart';
 import '../widgets/feature_section.dart';
 import '../widgets/collaboration_card.dart';
+import '../widgets/map_section.dart';
+import '../widgets/footer_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -83,9 +85,12 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 60),
                   const ProductSection(),
                   const SizedBox(height: 60),
-                  const CollaborationCard(),
+                  const MapSection(),
                   const SizedBox(height: 60),
                   const FeatureSection(),
+                  const SizedBox(height: 60),
+                  const CollaborationCard(),
+                  const FooterSection(),
                 ],
               ),
             ),

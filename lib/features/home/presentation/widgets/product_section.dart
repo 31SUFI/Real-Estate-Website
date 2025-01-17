@@ -49,8 +49,8 @@ class ProductSection extends StatelessWidget {
                 runSpacing: 24, // Vertical spacing between rows
                 alignment: WrapAlignment.center,
                 children: [
-                  _buildImageCard('assets/images/building.jpg',
-                      'Personal House', cardWidth),
+                  _buildImageCard(
+                      'assets/images/house.jpg', 'Personal House', cardWidth),
                   _buildImageCard('assets/images/building2.jpg',
                       'Residential Building', cardWidth),
                   _buildImageCard('assets/images/building.jpg',
