@@ -23,9 +23,7 @@ class NavBar extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.menu),
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
+              onPressed: () {},
             );
           },
         ),
