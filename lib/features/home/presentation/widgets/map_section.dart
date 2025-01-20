@@ -58,7 +58,7 @@ class MapSection extends StatelessWidget {
               height: 300,
               width: double.infinity,
               child: Image.asset(
-                'assets/images/building.jpg',
+                'assets/images/maps.jpg',
                 fit: BoxFit.contain,
                 alignment: Alignment.centerLeft,
               ),
